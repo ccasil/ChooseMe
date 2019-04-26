@@ -9,12 +9,53 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    
+    let items: [String] = ["Heads or Tails", "Random Number Generator", "Nose Goes"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
-
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "HoTSegue") {
+            if let destination = segue.destination as? HoTViewController {
+                destination.title = items[(tableView.indexPathForSelectedRow?.row)!]
+            }
+        }
+        else if (segue.identifier == "RandomSegue") {
+            if let destination = segue.destination as? HoTViewController {
+                destination.title = items[(tableView.indexPathForSelectedRow?.row)!]
+            }
+        }
+    }
 }
 
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath)
+        let text = items[indexPath.row]
+        cell.textLabel!.text = text
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            self.performSegue(withIdentifier: "HoTSegue", sender: self)
+        case 1:
+            self.performSegue(withIdentifier: "RandomSegue", sender: self)
+        default:
+            print ("Out of Index")
+        }
+    }
+    
+    
+}
