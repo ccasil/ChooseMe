@@ -13,7 +13,6 @@
         <!--Heads or Tails-->
         <scene sceneID="Uzo-qc-riK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3bU-bd-rSr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Heads or Tails" id="Mis-II-xGQ" customClass="HoTViewController" customModule="ChooseMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2jV-fX-3sz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -28,7 +27,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YL6-6I-oPQ">
                                 <rect key="frame" x="8" y="188" width="398" height="48"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Flip"/>
                                 <connections>
                                     <action selector="hotButtonPressed:" destination="Mis-II-xGQ" eventType="touchUpInside" id="GWh-HV-eJd"/>
                                 </connections>
@@ -75,6 +74,7 @@
                         <outlet property="tailLabel" destination="b2J-zi-NK3" id="Nut-gK-Taq"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3bU-bd-rSr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1941" y="-650"/>
         </scene>
@@ -119,11 +119,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Choose Me" id="PEm-x1-Rpo"/>
+                    <navigationItem key="navigationItem" title="Choose Me" id="PEm-x1-Rpo">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="bgh-oQ-xJb"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="RYU-D7-PtF" id="nmJ-Lh-oPo"/>
                         <segue destination="Mis-II-xGQ" kind="show" identifier="HoTSegue" id="Nok-4o-QLb"/>
-                        <segue destination="owc-OS-qn0" kind="show" identifier="RandomSegue" id="OFT-Y2-AsK"/>
+                        <segue destination="jN3-xM-qNC" kind="show" identifier="NameSegue" id="Zio-Oa-Ngm"/>
+                        <segue destination="owc-OS-qn0" kind="show" identifier="RandomSegue" id="bab-Gs-7Et"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -149,7 +152,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05o-I1-0jy">
                                         <rect key="frame" x="199" y="0.0" width="199" height="50"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Limit"/>
                                         <connections>
                                             <action selector="randomButtonPressed:" destination="owc-OS-qn0" eventType="touchUpInside" id="YSV-V6-DdF"/>
                                         </connections>
@@ -196,6 +199,84 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GRj-Ab-MVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1941" y="21"/>
+        </scene>
+        <!--Pick a Name-->
+        <scene sceneID="OtU-je-bON">
+            <objects>
+                <viewController title="Pick a Name" id="jN3-xM-qNC" customClass="PickNameViewController" customModule="ChooseMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pf3-dt-giV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LeC-07-Jp5">
+                                <rect key="frame" x="8" y="96" width="398" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YK2-5G-f0Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="199" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTN-jh-nfF">
+                                        <rect key="frame" x="199" y="0.0" width="199" height="30"/>
+                                        <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="jN3-xM-qNC" eventType="touchUpInside" id="MwL-yG-Jhx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="YK2-5G-f0Y" firstAttribute="width" secondItem="wTN-jh-nfF" secondAttribute="width" id="wUy-A4-64J"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcA-FA-IPv">
+                                <rect key="frame" x="8" y="142" width="398" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <state key="normal" title="Choose"/>
+                                <connections>
+                                    <action selector="chooseButtonPressed:" destination="jN3-xM-qNC" eventType="touchUpInside" id="YZD-oe-Mcv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXe-bx-Rll">
+                                <rect key="frame" x="8" y="202" width="398" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cE4-co-1aI">
+                                <rect key="frame" x="8" y="249.5" width="398" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hcA-FA-IPv" firstAttribute="leading" secondItem="2AU-Kf-O3j" secondAttribute="leading" constant="8" id="0FQ-bD-5w7"/>
+                            <constraint firstItem="2AU-Kf-O3j" firstAttribute="trailing" secondItem="cE4-co-1aI" secondAttribute="trailing" constant="8" id="8hm-FX-aSv"/>
+                            <constraint firstItem="LeC-07-Jp5" firstAttribute="top" secondItem="2AU-Kf-O3j" secondAttribute="top" constant="8" id="9DI-M4-eON"/>
+                            <constraint firstItem="PXe-bx-Rll" firstAttribute="top" secondItem="hcA-FA-IPv" secondAttribute="bottom" constant="24" id="DXM-ta-HJR"/>
+                            <constraint firstItem="2AU-Kf-O3j" firstAttribute="trailing" secondItem="hcA-FA-IPv" secondAttribute="trailing" constant="8" id="GJT-Kl-PFq"/>
+                            <constraint firstItem="PXe-bx-Rll" firstAttribute="leading" secondItem="2AU-Kf-O3j" secondAttribute="leading" constant="8" id="HoK-rx-fwo"/>
+                            <constraint firstItem="hcA-FA-IPv" firstAttribute="top" secondItem="LeC-07-Jp5" secondAttribute="bottom" constant="16" id="QCk-J1-vKt"/>
+                            <constraint firstItem="cE4-co-1aI" firstAttribute="top" secondItem="PXe-bx-Rll" secondAttribute="bottom" constant="16" id="SZG-0A-13f"/>
+                            <constraint firstItem="2AU-Kf-O3j" firstAttribute="trailing" secondItem="LeC-07-Jp5" secondAttribute="trailing" constant="8" id="TYT-n2-yqu"/>
+                            <constraint firstItem="LeC-07-Jp5" firstAttribute="leading" secondItem="2AU-Kf-O3j" secondAttribute="leading" constant="8" id="cg2-7t-CIm"/>
+                            <constraint firstItem="2AU-Kf-O3j" firstAttribute="trailing" secondItem="PXe-bx-Rll" secondAttribute="trailing" constant="8" id="iKb-XX-pph"/>
+                            <constraint firstItem="cE4-co-1aI" firstAttribute="leading" secondItem="2AU-Kf-O3j" secondAttribute="leading" constant="8" id="jTX-Uy-jlc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2AU-Kf-O3j"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="wTN-jh-nfF" id="nyA-hD-yTN"/>
+                        <outlet property="chosenLabel" destination="PXe-bx-Rll" id="pX3-gS-nvK"/>
+                        <outlet property="nameTextField" destination="YK2-5G-f0Y" id="srI-9P-wQm"/>
+                        <outlet property="namesLabel" destination="cE4-co-1aI" id="kEA-3k-HUc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLg-xk-UJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1941" y="759"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yS8-ks-ZNv">

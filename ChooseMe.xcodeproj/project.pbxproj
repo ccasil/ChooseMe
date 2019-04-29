@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2637C16E2277B95400266E24 /* PickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2637C16D2277B95400266E24 /* PickNameViewController.swift */; };
 		26FB79D62273B8BB00C8BA1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB79D52273B8BB00C8BA1A /* AppDelegate.swift */; };
 		26FB79D82273B8BB00C8BA1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB79D72273B8BB00C8BA1A /* ViewController.swift */; };
 		26FB79DB2273B8BB00C8BA1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FB79D92273B8BB00C8BA1A /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2637C16D2277B95400266E24 /* PickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickNameViewController.swift; sourceTree = "<group>"; };
 		26FB79D22273B8BB00C8BA1A /* ChooseMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChooseMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FB79D52273B8BB00C8BA1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26FB79D72273B8BB00C8BA1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				26FB79D72273B8BB00C8BA1A /* ViewController.swift */,
 				26FB79EE2273CFF100C8BA1A /* UIViewController.swift */,
 				26FB79D92273B8BB00C8BA1A /* Main.storyboard */,
+				2637C16D2277B95400266E24 /* PickNameViewController.swift */,
 				26FB79EC2273C16300C8BA1A /* RandNumViewController.swift */,
 				26FB79EA2273BC0B00C8BA1A /* HoTViewController.swift */,
 				26FB79DF2273B8BE00C8BA1A /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26FB79EB2273BC0B00C8BA1A /* HoTViewController.swift in Sources */,
+				2637C16E2277B95400266E24 /* PickNameViewController.swift in Sources */,
 				26FB79D82273B8BB00C8BA1A /* ViewController.swift in Sources */,
 				26FB79EF2273CFF100C8BA1A /* UIViewController.swift in Sources */,
 				26FB79ED2273C16300C8BA1A /* RandNumViewController.swift in Sources */,
