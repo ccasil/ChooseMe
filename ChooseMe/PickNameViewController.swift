@@ -11,6 +11,7 @@ import UIKit
 class PickNameViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var chooseButton: UIButton!
     @IBOutlet weak var chosenLabel: UILabel!
     @IBOutlet weak var namesLabel: UILabel!
     
@@ -19,10 +20,14 @@ class PickNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideKeyboardWhenTappedAround() 
+        
         namesLabel.text = ""
         chosenLabel.text = " "
+        chooseButton.isEnabled = false
     }
     @IBAction func addButtonPressed(_ sender: UIButton) {
+        chooseButton.isEnabled = true
         if let name = nameTextField.text, nameTextField.text != "" {
             names.append(name)
             nameTextField.text?.removeAll()

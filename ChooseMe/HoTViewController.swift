@@ -21,7 +21,7 @@ class HoTViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        hotLabel.text = "Heads or Tails?"
+        hotLabel.text = " "
         headLabel.text = "0 Heads"
         tailLabel.text = "0 Tails"
     }

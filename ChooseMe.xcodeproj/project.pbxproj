@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2637C16E2277B95400266E24 /* PickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2637C16D2277B95400266E24 /* PickNameViewController.swift */; };
+		2637C1702278BA4700266E24 /* OrderNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2637C16F2278BA4700266E24 /* OrderNameViewController.swift */; };
 		26FB79D62273B8BB00C8BA1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB79D52273B8BB00C8BA1A /* AppDelegate.swift */; };
 		26FB79D82273B8BB00C8BA1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB79D72273B8BB00C8BA1A /* ViewController.swift */; };
 		26FB79DB2273B8BB00C8BA1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FB79D92273B8BB00C8BA1A /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		2637C16D2277B95400266E24 /* PickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickNameViewController.swift; sourceTree = "<group>"; };
+		2637C16F2278BA4700266E24 /* OrderNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderNameViewController.swift; sourceTree = "<group>"; };
 		26FB79D22273B8BB00C8BA1A /* ChooseMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChooseMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FB79D52273B8BB00C8BA1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26FB79D72273B8BB00C8BA1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				26FB79D72273B8BB00C8BA1A /* ViewController.swift */,
 				26FB79EE2273CFF100C8BA1A /* UIViewController.swift */,
 				26FB79D92273B8BB00C8BA1A /* Main.storyboard */,
+				2637C16F2278BA4700266E24 /* OrderNameViewController.swift */,
 				2637C16D2277B95400266E24 /* PickNameViewController.swift */,
 				26FB79EC2273C16300C8BA1A /* RandNumViewController.swift */,
 				26FB79EA2273BC0B00C8BA1A /* HoTViewController.swift */,
@@ -154,6 +157,7 @@
 				2637C16E2277B95400266E24 /* PickNameViewController.swift in Sources */,
 				26FB79D82273B8BB00C8BA1A /* ViewController.swift in Sources */,
 				26FB79EF2273CFF100C8BA1A /* UIViewController.swift in Sources */,
+				2637C1702278BA4700266E24 /* OrderNameViewController.swift in Sources */,
 				26FB79ED2273C16300C8BA1A /* RandNumViewController.swift in Sources */,
 				26FB79D62273B8BB00C8BA1A /* AppDelegate.swift in Sources */,
 				26FB79DE2273B8BB00C8BA1A /* ChooseMe.xcdatamodeld in Sources */,

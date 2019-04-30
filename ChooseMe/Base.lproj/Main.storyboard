@@ -10,6 +10,74 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Name Shuffle-->
+        <scene sceneID="3Nm-gh-XmU">
+            <objects>
+                <viewController title="Name Shuffle" id="05W-ud-kks" customClass="OrderNameViewController" customModule="ChooseMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2i3-mY-GPg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2co-sS-F9I">
+                                <rect key="frame" x="8" y="96" width="398" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tSu-Zg-6js">
+                                        <rect key="frame" x="0.0" y="0.0" width="199" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2P0-gu-ARo">
+                                        <rect key="frame" x="199" y="0.0" width="199" height="30"/>
+                                        <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="05W-ud-kks" eventType="touchUpInside" id="bAp-5r-E8Z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tSu-Zg-6js" firstAttribute="width" secondItem="2P0-gu-ARo" secondAttribute="width" id="oGS-Tt-OLi"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbB-dl-D4V">
+                                <rect key="frame" x="8" y="142" width="398" height="44"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Shuffle"/>
+                                <connections>
+                                    <action selector="orderButtonPressed:" destination="05W-ud-kks" eventType="touchUpInside" id="LFz-FA-mpI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6x-ll-X7A">
+                                <rect key="frame" x="8" y="202" width="398" height="24"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dbB-dl-D4V" firstAttribute="top" secondItem="2co-sS-F9I" secondAttribute="bottom" constant="16" id="B8m-aw-J7k"/>
+                            <constraint firstItem="2co-sS-F9I" firstAttribute="leading" secondItem="33U-M9-0PH" secondAttribute="leading" constant="8" id="GTu-Rj-Nsr"/>
+                            <constraint firstItem="L6x-ll-X7A" firstAttribute="top" secondItem="dbB-dl-D4V" secondAttribute="bottom" constant="16" id="MTG-rL-fBl"/>
+                            <constraint firstItem="33U-M9-0PH" firstAttribute="trailing" secondItem="L6x-ll-X7A" secondAttribute="trailing" constant="8" id="PmY-7w-bl2"/>
+                            <constraint firstItem="2co-sS-F9I" firstAttribute="top" secondItem="33U-M9-0PH" secondAttribute="top" constant="8" id="VCn-dk-bsO"/>
+                            <constraint firstItem="L6x-ll-X7A" firstAttribute="leading" secondItem="33U-M9-0PH" secondAttribute="leading" constant="8" id="Vzz-jy-eO6"/>
+                            <constraint firstItem="33U-M9-0PH" firstAttribute="trailing" secondItem="dbB-dl-D4V" secondAttribute="trailing" constant="8" id="XWd-KG-QoG"/>
+                            <constraint firstItem="dbB-dl-D4V" firstAttribute="leading" secondItem="33U-M9-0PH" secondAttribute="leading" constant="8" id="aC0-5S-WRn"/>
+                            <constraint firstItem="33U-M9-0PH" firstAttribute="trailing" secondItem="2co-sS-F9I" secondAttribute="trailing" constant="8" id="qZ4-O5-nX6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="33U-M9-0PH"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="tSu-Zg-6js" id="kn2-Mz-mYU"/>
+                        <outlet property="nameTextLabel" destination="L6x-ll-X7A" id="LoK-sQ-d8V"/>
+                        <outlet property="orderButton" destination="dbB-dl-D4V" id="SjH-JM-Yih"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bjj-sA-71a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2075" y="1698"/>
+        </scene>
         <!--Heads or Tails-->
         <scene sceneID="Uzo-qc-riK">
             <objects>
@@ -76,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3bU-bd-rSr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1941" y="-650"/>
+            <point key="canvasLocation" x="-1629" y="1698"/>
         </scene>
         <!--Choose Me-->
         <scene sceneID="tne-QT-ifu">
@@ -127,11 +195,12 @@
                         <segue destination="Mis-II-xGQ" kind="show" identifier="HoTSegue" id="Nok-4o-QLb"/>
                         <segue destination="jN3-xM-qNC" kind="show" identifier="NameSegue" id="Zio-Oa-Ngm"/>
                         <segue destination="owc-OS-qn0" kind="show" identifier="RandomSegue" id="bab-Gs-7Et"/>
+                        <segue destination="05W-ud-kks" kind="show" identifier="OrderSegue" id="4aK-0K-Wxo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="957.97101449275374" y="20.758928571428569"/>
+            <point key="canvasLocation" x="35" y="759"/>
         </scene>
         <!--Random Number Generator-->
         <scene sceneID="pKO-qd-xH5">
@@ -166,7 +235,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfH-kR-s8G">
                                 <rect key="frame" x="8" y="178" width="398" height="36"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8Z-pp-G6Y">
@@ -198,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GRj-Ab-MVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1941" y="21"/>
+            <point key="canvasLocation" x="-452" y="1698"/>
         </scene>
         <!--Pick a Name-->
         <scene sceneID="OtU-je-bON">
@@ -269,6 +338,7 @@
                     </view>
                     <connections>
                         <outlet property="addButton" destination="wTN-jh-nfF" id="nyA-hD-yTN"/>
+                        <outlet property="chooseButton" destination="hcA-FA-IPv" id="qHV-lO-qIx"/>
                         <outlet property="chosenLabel" destination="PXe-bx-Rll" id="pX3-gS-nvK"/>
                         <outlet property="nameTextField" destination="YK2-5G-f0Y" id="srI-9P-wQm"/>
                         <outlet property="namesLabel" destination="cE4-co-1aI" id="kEA-3k-HUc"/>
@@ -276,7 +346,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLg-xk-UJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1941" y="759"/>
+            <point key="canvasLocation" x="870" y="1698"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yS8-ks-ZNv">

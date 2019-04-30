@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    let items: [String] = ["Heads or Tails", "Random Number Generator", "Pick a Name"]
+    let items: [String] = ["Heads or Tails", "Random Number Generator", "Pick a Name", "Name Shuffle"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +34,11 @@ class ViewController: UIViewController {
         else if (segue.identifier == "NameSegue") {
             if let destination = segue.destination as? PickNameViewController {
                 destination.title = items[(tableView.indexPathForSelectedRow?.row)!]
+            }
+            else if (segue.identifier == "OrderSegue") {
+                if let destination = segue.destination as? OrderNameViewController {
+                    destination.title = items[(tableView.indexPathForSelectedRow?.row)!]
+                }
             }
         }
     }
@@ -59,6 +64,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             self.performSegue(withIdentifier: "RandomSegue", sender: self)
         case 2:
             self.performSegue(withIdentifier: "NameSegue", sender: self)
+        case 3:
+            self.performSegue(withIdentifier: "OrderSegue", sender: self)
         default:
             print ("Out of Index")
         }

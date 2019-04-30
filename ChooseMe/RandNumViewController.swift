@@ -17,7 +17,8 @@ class RandNumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        previousLabel.text = "0"
+        previousLabel.text = " "
+        randomNumberLabel.text = " "
         
         self.hideKeyboardWhenTappedAround() 
     }
